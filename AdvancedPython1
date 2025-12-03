@@ -1,0 +1,424 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyN8u7YqAvZkapzjuLUMwGpu",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Akshayasree166/JFSD_CSE_110/blob/main/AdvancedPython1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "aa-PIBHSiwRb",
+        "outputId": "b3676dc4-559e-411a-c861-4a9003095d1a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "25\n"
+          ]
+        }
+      ],
+      "source": [
+        "square = lambda n: n*n\n",
+        "print(square(5))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "add = lambda x,y:x+y\n",
+        "print(add(19,28))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xA7dYBkojHxU",
+        "outputId": "8b82cf90-d3d6-4328-c61b-bb9700d5d249"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "47\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numbers=[1,2,3,4,5]\n",
+        "squared=list(map(lambda x:x*x,numbers))\n",
+        "print(squared)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3Jpyt8bKjjgW",
+        "outputId": "08ead5df-fe8a-44b5-df8f-210522a14268"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 4, 9, 16, 25]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a=[1,2,3,4]\n",
+        "b=[5,6,7,8]\n",
+        "result=list(map(lambda x,y:x+y,a,b))\n",
+        "print(result)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0o97fpr_jusi",
+        "outputId": "f7aa3b87-2492-43c5-8a6a-b45aaa3c49b6"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[6, 8, 10, 12]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=[2,4,6]\n",
+        "y=[5]\n",
+        "result=list(map(lambda x,y:x*y,x,y))\n",
+        "print(result)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3bLNS91bklHA",
+        "outputId": "ea22ecbe-ec1a-40d3-bd10-f9a1e8239d4f"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[10]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numbers=[10,21,32,43,54]\n",
+        "even_nums=list(filter(lambda x:x%2==0,numbers))\n",
+        "print(even_nums)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "h5zcq6nbkqhq",
+        "outputId": "01294cfd-cc11-46b0-b15d-9224ec749364"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[10, 32, 54]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from functools import reduce\n",
+        "numbers=[1,2,3,4]\n",
+        "sum=reduce(lambda x,y:x+y,numbers)\n",
+        "print(sum)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1Iv1bVVzkz2W",
+        "outputId": "eb8f8850-d4e3-4b13-d32a-7bfc53ec7fd2"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "squares=[x*x for x in range(1,6)]\n",
+        "print(squares)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EyiQGocDmG_v",
+        "outputId": "dcecd683-e426-44f8-bfc9-e98df35a6296"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 4, 9, 16, 25]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "evens=[x for x in range(1,11) if x%2==0]\n",
+        "print(evens)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YrqkjbwnmOK0",
+        "outputId": "89d8c49a-6caa-444f-8fe9-935c441feb27"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[2, 4, 6, 8, 10]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "matrix=[[1,2],[3,4],[5,6]]\n",
+        "flat=[num for row in matrix for num in row]\n",
+        "print(flat)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3dgpKBivmnSp",
+        "outputId": "9f22eefc-8fa7-4498-c640-4259d914c7f8"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 4, 5, 6]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Task 1a\n",
+        "texts=[\n",
+        "    \"  This is an example of Text Cleaning\",\n",
+        "    \"Map AND filter are Very useful in Python  \",\n",
+        "    \"      reduce Helps combine Results\"\n",
+        "]"
+      ],
+      "metadata": {
+        "id": "ck--q_VSmzY2"
+      },
+      "execution_count": 14,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "stopwords={\"is\",\"an\",\"of\",\"and\",\"are\",\"in\"}"
+      ],
+      "metadata": {
+        "id": "PwLyYOb3oBrP"
+      },
+      "execution_count": 16,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cleaned_texts=list(map(lambda s:s.lower().strip(), texts))\n",
+        "print(\"After lowercase + strip;\\n\", cleaned_texts, \"\\n\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0REp5dh2oQPG",
+        "outputId": "83a82052-1b6c-4ac8-bd72-517a9d5cbed7"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "After lowercase + strip;\n",
+            " ['this is an example of text cleaning', 'map and filter are very useful in python', 'reduce helps combine results'] \n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tokenized = list(map(lambda s:s.split(), cleaned_texts))\n",
+        "print(\"Tokenized:\\n\", tokenized, \"\\n\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2RGC4191osDx",
+        "outputId": "fadb6d73-7283-404d-c521-0fa3580cd5e3"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Tokenized:\n",
+            " [['this', 'is', 'an', 'example', 'of', 'text', 'cleaning'], ['map', 'and', 'filter', 'are', 'very', 'useful', 'in', 'python'], ['reduce', 'helps', 'combine', 'results']] \n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "filtered_tokens=list(map(lambda words:list(filter(lambda w:w not in stopwords,words)),tokenized))\n",
+        "print(\"Filtered:\\n\", filtered_tokens, \"\\n\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tp9M4880o-gv",
+        "outputId": "57463664-00a3-4c05-9f85-a662b3a3cf13"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Filtered:\n",
+            " [['this', 'example', 'text', 'cleaning'], ['map', 'filter', 'very', 'useful', 'python'], ['reduce', 'helps', 'combine', 'results']] \n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Task 1b\n",
+        "from functools import reduce\n",
+        "prices=[100,250,399,50]\n",
+        "tax_rate=0.10\n",
+        "\n",
+        "sales_tax=list(map(lambda p:p*tax_rate,prices))\n",
+        "print(\"Sales tax:\\n\", sales_tax)\n",
+        "\n",
+        "final_prices=list(map(lambda p:p+p*tax_rate, prices))\n",
+        "print(\"Final prices:\\n\", final_prices)\n",
+        "\n",
+        "total_tax=reduce(lambda a,b:a+b, sales_tax)\n",
+        "print(\"Total sales tax:\\n\", total_tax)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "W7XQn65hpeM7",
+        "outputId": "94ec5bbd-a46c-4b0d-8873-05e36de063a9"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Sales tax:\n",
+            " [10.0, 25.0, 39.900000000000006, 5.0]\n",
+            "Final prices:\n",
+            " [110.0, 275.0, 438.9, 55.0]\n",
+            "Total sales tax:\n",
+            " 79.9\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
